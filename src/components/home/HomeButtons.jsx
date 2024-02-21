@@ -1,8 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { Reveal } from "../../utils/Reveal";
+import { useNavigate } from "react-router-dom";
+import Nav from "../navbar/Nav";
 
 function HomeButtons() {
+  const navigate = useNavigate();
   return (
     <Reveal>
       <div
@@ -27,7 +30,9 @@ function HomeButtons() {
             height: "40px",
           }}
         >
-          Experience
+          <a href="#exp" style={{ textDecoration: "none", color: "white" }}>
+            Experience
+          </a>
         </Button>
         <Button
           variant="contained"
@@ -43,6 +48,7 @@ function HomeButtons() {
             minWidth: "120px",
             height: "40px",
           }}
+          onClick={() => navigate("/contact")}
         >
           Contact
         </Button>

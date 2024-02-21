@@ -1,12 +1,20 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import Input from "@mui/material/Input";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = () => {
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill all the fields");
+      return;
+    }
+    console.log(name, email, message);
+  };
   return (
     <div className="flex content-center justify-center w-96	 ">
       <Box
@@ -17,7 +25,7 @@ function Form() {
           justifyContent: "center",
           alignItems: "center",
           gap: "2rem",
-          width: "300px",
+          width: { lg: "500px", sm: "fit-content" },
         }}
         noValidate
         autoComplete="off"
@@ -48,11 +56,22 @@ function Form() {
           variant="outlined"
           multiline
           rows={4} // Adjust the number of rows as needed
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           sx={{
             height: "100px", // Adjust the height as needed
             width: "100%", // Optional: Adjust the width as needed
           }}
         />
+
+        <Button
+          variant="contained"
+          style={{ backgroundColor: "black", color: "white" }}
+          sx={{ width: "100%" }}
+          onClick={handleSubmit}
+        >
+          Send
+        </Button>
       </Box>
     </div>
   );
