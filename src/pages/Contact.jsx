@@ -13,7 +13,7 @@ function Contact() {
         gap: "1rem",
       }}
     >
-      <h1 style={{ textAlign: "center" }} className="text-lg">
+      <h1 style={{ textAlign: "center" }} className="text-2xl ">
         Contact Me
       </h1>
       <Form />

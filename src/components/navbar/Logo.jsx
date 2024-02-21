@@ -5,13 +5,13 @@ import { RevealDown } from "../../utils/Reveal";
 function Logo() {
   return (
     <RevealDown>
-      <Link to="/" className="hover:text-white ">
+      <a href="/" className="hover:text-white ">
         <img
           src={"catlogo.jpeg"}
           alt="logo"
           className="w-20 h-20 rounded-full shadow-md"
         />
-      </Link>
+      </a>
     </RevealDown>
   );
 }

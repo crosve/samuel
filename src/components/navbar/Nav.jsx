@@ -7,8 +7,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 function NavLinks() {
   return (
     <>
-      <NavLink to="/about" className="text-xl ffont-medium hover:text-white">
-        About
+      <NavLink to="/" className="text-xl ffont-medium hover:text-white">
+        Home
       </NavLink>
       <NavLink to="/reviews" className="text-xl font-medium hover:text-white">
         Reviews

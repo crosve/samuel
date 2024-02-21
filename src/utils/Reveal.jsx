@@ -3,25 +3,26 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 export const Reveal = ({ children }) => {
   const ref = useRef(null);
-  const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
+  const isInView = useInView(ref, { once: true });
 
   const controls = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
+      console.log("isInView", isInView);
       controls.start("visible");
     }
-  }, [inView, controls]);
+  }, [isInView]);
 
   return (
-    <div ref={inViewRef} style={{ position: "relative", overflow: "hidden" }}>
+    <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 45 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
-        animate="visible"
+        animate={controls}
         transition={{ duration: 0.5, delay: 0.25 }}
       >
         {children}
