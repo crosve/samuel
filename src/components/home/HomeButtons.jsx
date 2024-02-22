@@ -31,7 +31,7 @@ function HomeButtons() {
           }}
         >
           <a href="#exp" style={{ textDecoration: "none", color: "white" }}>
-            Experience
+            Services
           </a>
         </Button>
         <Button
