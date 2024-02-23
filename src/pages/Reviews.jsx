@@ -1,8 +1,5 @@
-
 function Reviews() {
-  return (
-    <div>Reviews</div>
-  )
+  return <div>Gallery</div>;
 }
 
-export default Reviews
+export default Reviews;
