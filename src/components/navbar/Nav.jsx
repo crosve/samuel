@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { RevealDown } from "../../utils/Reveal";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 function NavLinks() {
   return (
@@ -11,7 +11,7 @@ function NavLinks() {
         Home
       </NavLink>
       <NavLink to="/reviews" className="text-xl font-medium hover:text-white">
-        Reviews
+        Gallery
       </NavLink>
       <NavLink to="/contact" className="text-xl font-medium hover:text-white">
         Contact
