@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="bg-transparent sticky top-0 z-[20] mx-auto flex flex-wrap w-full items-center justify-between  p-6"
+      className="bg-transparent sticky top-0 z-[20] mx-auto flex flex-wrap w-full items-center justify-between  p-6 "
       variants={{
         hidden: { y: -150 },
         visible: { y: 0 },

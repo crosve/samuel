@@ -6,11 +6,20 @@ function Logo() {
   return (
     <RevealDown>
       <a href="/" className="hover:text-white ">
-        <img
+        <p
+          style={{
+            fontFamily: "Bodoni, serif",
+            fontSize: "30px",
+            fontWeight: "bold",
+          }}
+        >
+          Samuel
+        </p>
+        {/* <img
           src={"catlogo.jpeg"}
           alt="logo"
           className="w-20 h-20 rounded-full shadow-md"
-        />
+        /> */}
       </a>
     </RevealDown>
   );

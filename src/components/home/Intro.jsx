@@ -10,14 +10,19 @@ function Intro() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position: "sticky",
+        top: 0,
         width: "100%",
-        height: "500px",
+        height: "100vh",
+        borderRadius: "40px",
+        padding: "0 0 15rem 0",
       }}
     >
       <Box
         sx={{
           p: { lg: "4", xs: "2" },
           m: { lg: "2", sx: "1" },
+          mb: { lg: "4", xs: "2" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

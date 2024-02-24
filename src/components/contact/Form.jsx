@@ -1,24 +1,53 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import emailjs from "@emailjs/browser";
 
 function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
+  const process = import.meta.env;
+
+  const ref = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (name === "" || email === "" || message === "") {
       alert("Please fill all the fields");
       return;
     }
-    console.log(name, email, message);
+    emailjs
+      .sendForm(
+        process.VITE_SERVICE_ID,
+        process.VITE_TEMPLATE_ID,
+        ref.current,
+        {
+          publicKey: process.VITE_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
   return (
-    <div className="flex content-center justify-center w-96	 ">
+    <form
+      ref={ref}
+      className="flex content-center justify-center w-96"
+      onSubmit={handleSubmit}
+    >
       <Box
-        component="form"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -34,6 +63,7 @@ function Form() {
           id="outlined-basic"
           label="Name"
           variant="outlined"
+          name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           sx={{
@@ -44,6 +74,7 @@ function Form() {
           id="outlined-basic"
           label="Email"
           variant="outlined"
+          name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           sx={{
@@ -54,6 +85,7 @@ function Form() {
           id="outlined-basic"
           label="Message"
           variant="outlined"
+          name="message"
           multiline
           rows={4} // Adjust the number of rows as needed
           value={message}
@@ -66,14 +98,14 @@ function Form() {
 
         <Button
           variant="contained"
+          type="submit"
           style={{ backgroundColor: "black", color: "white" }}
           sx={{ width: "100%" }}
-          onClick={handleSubmit}
         >
           Send
         </Button>
       </Box>
-    </div>
+    </form>
   );
 }
 

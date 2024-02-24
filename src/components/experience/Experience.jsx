@@ -1,24 +1,31 @@
 import Box from "@mui/material/Box";
 import { Reveal } from "../../utils/Reveal";
+import Bio from "./Bio";
 
 function Experience() {
   return (
-    <section className="h-screen" id="exp">
+    <section
+      className="h-screen top-0 sticky "
+      style={{ background: "#B9A2A2" }}
+      id="exp"
+    >
       <Box
-        className="flex flex-col items-center justify-center"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4"
         sx={{ width: "100%", height: "100%" }}
       >
         <Reveal>
-          <h1 className="text-2xl">Experience</h1>
+          <div className="flex justify-center items-center w-full h-full">
+            <img
+              className="w-full h-auto lg:h-72 lg:w-72 sm:w-48 sm:h-48 rounded-full drop-shadow-lg"
+              src="man.jpeg"
+            ></img>
+          </div>
         </Reveal>
 
         <Reveal>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            condimentum, sem nec congue fringilla, nunc ex malesuada libero, at
-            lacinia nisl elit nec erat. Sed et nunc nec ex malesuada libero, at
-            lacinia nisl elit nec erat. Sed
-          </p>
+          <div className="flex justify-left items-center w-full h-full">
+            <Bio />
+          </div>
         </Reveal>
       </Box>
     </section>

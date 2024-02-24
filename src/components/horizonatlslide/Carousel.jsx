@@ -43,8 +43,8 @@ function Carousel() {
   return (
     <section
       ref={ref}
-      className="h-[300vh] relative"
-      // style={{ background: "#93A3A9" }}
+      className="h-[300vh]  top-0 sticky"
+      style={{ background: "#C2B3B3" }}
     >
       <div className="flex flex-row sticky  top-0 h-screen items-center  overflow-hidden">
         <motion.div style={{ x }} className="flex flex-row gap-20">
