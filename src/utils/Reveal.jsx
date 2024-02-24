@@ -15,7 +15,13 @@ export const Reveal = ({ children }) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+    <div
+      ref={ref}
+      style={{
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 45 },
@@ -24,6 +30,7 @@ export const Reveal = ({ children }) => {
         initial="hidden"
         animate={controls}
         transition={{ duration: 0.5, delay: 0.25 }}
+        className="w-full h-full"
       >
         {children}
       </motion.div>
