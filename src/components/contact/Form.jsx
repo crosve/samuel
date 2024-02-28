@@ -44,7 +44,7 @@ function Form() {
   return (
     <form
       ref={ref}
-      className="flex content-center justify-center w-96"
+      className="flex content-center justify-center lg:w-2/6 bg-white rounded-lg p-4"
       onSubmit={handleSubmit}
     >
       <Box
@@ -54,33 +54,37 @@ function Form() {
           justifyContent: "center",
           alignItems: "center",
           gap: "2rem",
-          width: { lg: "500px", sm: "fit-content" },
+          width: "100%",
+          padding: "1rem",
         }}
         noValidate
         autoComplete="off"
       >
         <TextField
-          id="outlined-basic"
+          id="standard-basic"
+          variant="standard"
           label="Name"
-          variant="outlined"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           sx={{
             width: "100%",
+            borderBottom: "1px solid black",
           }}
         ></TextField>
         <TextField
-          id="outlined-basic"
+          id="standard-basic"
           label="Email"
-          variant="outlined"
+          variant="standard"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           sx={{
             width: "100%",
+            borderBottom: "1px solid black",
           }}
         ></TextField>
+
         <TextField
           id="outlined-basic"
           label="Message"
@@ -92,14 +96,14 @@ function Form() {
           onChange={(e) => setMessage(e.target.value)}
           sx={{
             height: "100px", // Adjust the height as needed
-            width: "100%", // Optional: Adjust the width as needed
+            width: "100%",
           }}
         />
 
         <Button
           variant="contained"
           type="submit"
-          style={{ backgroundColor: "black", color: "white" }}
+          style={{ backgroundColor: "gray", color: "white" }}
           sx={{ width: "100%" }}
         >
           Send

@@ -16,12 +16,12 @@ function HomeButtons() {
         }}
       >
         <Button
-          variant="contained"
+          variant="outlined"
           style={{
-            backgroundColor: "#222222",
             color: "#FFFFFF",
             padding: "1rem",
             margin: "1rem",
+            borderColor: "#fafafa",
             borderRadius: "10px",
             fontFamily: "Inter",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -31,10 +31,10 @@ function HomeButtons() {
           }}
         >
           <a href="#exp" style={{ textDecoration: "none", color: "white" }}>
-            Services
+            Explore
           </a>
         </Button>
-        <Button
+        {/* <Button
           variant="contained"
           size="large"
           style={{
@@ -51,7 +51,7 @@ function HomeButtons() {
           onClick={() => navigate("/contact")}
         >
           Contact
-        </Button>
+        </Button> */}
       </div>
     </Reveal>
   );

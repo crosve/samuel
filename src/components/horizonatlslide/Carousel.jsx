@@ -44,7 +44,7 @@ function Carousel() {
     <section
       ref={ref}
       className="h-[300vh]  top-0 sticky"
-      style={{ background: "#C2B3B3" }}
+      style={{ background: "#292929", borderRadius: "40px" }}
     >
       <div className="flex flex-row sticky  top-0 h-screen items-center  overflow-hidden">
         <motion.div style={{ x }} className="flex flex-row gap-20">
