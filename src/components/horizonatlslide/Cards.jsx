@@ -43,7 +43,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative overflow-hidden bg-neutral-200 rounded-xl shadow-lg p-4 box-border pb-8
+      className="group relative overflow-hidden bg-neutral-200 rounded-xl text-black shadow-lg p-4 box-border pb-8
              h-[250px] w-[250px] sm:h-[300px] sm:w-[300px]
              md:h-[450px] md:w-[450px] lg:h-[500px] lg:w-[500px]"
     >

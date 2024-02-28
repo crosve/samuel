@@ -6,7 +6,7 @@ function Experience() {
   return (
     <section
       className="h-screen top-0 sticky "
-      style={{ background: "#B9A2A2" }}
+      style={{ background: "#686868", borderRadius: "40px" }}
       id="exp"
     >
       <Box

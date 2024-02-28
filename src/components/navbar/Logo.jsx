@@ -11,15 +11,11 @@ function Logo() {
             fontFamily: "Bodoni, serif",
             fontSize: "30px",
             fontWeight: "bold",
+            padding: "2rem",
           }}
         >
           Samuel
         </p>
-        {/* <img
-          src={"catlogo.jpeg"}
-          alt="logo"
-          className="w-20 h-20 rounded-full shadow-md"
-        /> */}
       </a>
     </RevealDown>
   );

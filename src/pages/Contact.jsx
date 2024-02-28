@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div
       style={{
-        height: "500px",
+        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

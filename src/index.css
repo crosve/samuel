@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  color: #35221e;
 }
 
 html {
@@ -14,7 +13,8 @@ html {
 }
 
 body{
-  background: #C2AEAE;
-  color: #35221e;
-  font-weight: 400;
+  background: #424242; 
+  color: #fafafa;
+  font-weight: 300;
 }
+
