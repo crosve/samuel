@@ -45,7 +45,7 @@ const Card = ({ card }) => {
       key={card.id}
       className="group relative overflow-hidden bg-neutral-200 rounded-xl text-black shadow-lg p-4 box-border pb-8
              h-[250px] w-[250px] sm:h-[300px] sm:w-[300px]
-             md:h-[450px] md:w-[450px] lg:h-[500px] lg:w-[500px]"
+             md:h-[450px] md:w-[450px] "
     >
       <FontAwesomeIcon
         icon={symbol}
@@ -71,9 +71,7 @@ const Card = ({ card }) => {
             margintop: "3rem",
             fontSize: "auto",
             sm: { height: "1rem", width: "5rem" },
-            lg: { height: "3rem", width: "10rem" },
-            // height: "3rem",
-            // width: "10rem",
+            md: { height: "1rem", width: "6rem" },
             fontSize: "auto",
           }}
           onClick={() => navigate("/contact")}
