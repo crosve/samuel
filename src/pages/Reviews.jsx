@@ -12,6 +12,7 @@ const images = [
 
 function Reviews() {
   const [data, setData] = useState({ img: "", i: 0 });
+
   const viewImage = (img, i) => {
     setData({ img, i });
   };
@@ -36,18 +37,18 @@ function Reviews() {
       {data.img && (
         <div
           style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
             width: "100%",
             height: "100vh",
-            position: "fixed",
-            top: "0",
-            gap: "20px",
-            left: "0",
             background: "black",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            overflow: "hidden",
+            zIndex: 9999, // Set a higher z-index
+            gap: "20px",
           }}
         >
           <img
@@ -58,7 +59,7 @@ function Reviews() {
               maxHeight: "90%",
               top: "50%",
             }}
-          ></img>
+          />
           <div className="flex items-center justify-center gap-4">
             {data.i > 0 && (
               <button
@@ -68,14 +69,12 @@ function Reviews() {
                 Back
               </button>
             )}
-
             <button
               className=" bg-slate-600 h-12 w-16 rounded-lg text-center text-white font-bold hover:bg-slate-100"
               onClick={() => closeImage()}
             >
               Close
             </button>
-
             {data.i < images.length - 1 && (
               <button
                 className=" bg-slate-600 h-12 w-16 rounded-lg text-center text-white font-bold hover:bg-slate-100"
@@ -87,11 +86,13 @@ function Reviews() {
           </div>
         </div>
       )}
+
       <div
         style={{
           padding: "100px 50px 0 50px",
-          display: "absolute",
+          display: "relative",
           boxSizing: "border-box",
+          zIndex: 1,
         }}
       >
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
