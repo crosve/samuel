@@ -1,14 +1,54 @@
-import React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 
 function Bottom() {
+  const [hover, setHover] = useState(
+    "hover:text-stone-600 transition-colors duration-300 cursor-pointer"
+  );
   return (
-    <Box sx={{ border: "1px dashed grey", borderRadius: "40px" }}>
-      <div className="flex flex-col items-center justify-center h-40 text-white">
-        <h1 className="text-2xl font-bold">Get in touch today</h1>
-        {/* <p className="text-sm">1234 Main Street, Anytown, USA</p>
-        <p className="text-sm">123-456-7890</p> */}
-        <p className="text-sm"></p>
+    <Box sx={{ borderRadius: "40px", height: "full" }}>
+      <div className="flex flex-col items-center justify-center text-white p-7">
+        <div className="border-b-2 border-stone-500 my-2 text-center w-full">
+          <div className="flex flex-col md:flex-row justify-around mt-4 mb-10 w-full">
+            <div className="text-center mb-4 md:mb-0">
+              <h2 className="text-xl font-bold">About Me</h2>
+              <ul>
+                <li className="text-sm mb-2 mt-2 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                  About Us
+                </li>
+                <li className="text-sm mb-2 mt-2 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Our Team
+                </li>
+                {/* <li className="text-sm mb-1 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Careers
+                </li> */}
+              </ul>
+            </div>
+            <div className="text-center mb-4 md:mb-0">
+              <h2 className="text-xl font-bold">Contact</h2>
+              <ul>
+                <li className="text-sm text-stone-400 mb-2 mt-2 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Email Me
+                </li>
+                <li className="text-sm mb-2 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Call Me
+                </li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <h2 className="text-xl font-bold">Follow Me</h2>
+              <ul>
+                <li className="text-sm text-stone-400 mb-2 mt-2 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Facebook
+                </li>
+                <li className="text-sm text-stone-400 mb-2 hover:text-white transition-colors duration-300 cursor-pointer">
+                  Instagram
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p className="mt-4 font-serif">@2024 Samuel. All rights reserved.</p>
       </div>
     </Box>
   );

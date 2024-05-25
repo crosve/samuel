@@ -15,7 +15,6 @@ function Home() {
         <div
           className="h-40 w-screen absolute "
           style={{
-            border: "1px dashed grey",
             borderTopLeftRadius: "40px",
             borderRadius: "40px",
           }}

@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="bg-transparent absolute top-0 z-[20] mx-auto flex flex-wrap w-full items-center justify-between   "
+      className="bg-transparent absolute top-0 z-[20] mx-auto flex flex-wrap w-full items-center justify-between px-2 lg:px-4   "
       style={{ borderRadius: "40px" }}
       variants={{
         hidden: { y: -150 },
