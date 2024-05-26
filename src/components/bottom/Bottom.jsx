@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 
 function Bottom() {
@@ -19,16 +20,18 @@ function Bottom() {
                 <li className="text-sm mb-2 mt-2 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
                   Our Team
                 </li>
-                {/* <li className="text-sm mb-1 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
-                  Careers
-                </li> */}
               </ul>
             </div>
             <div className="text-center mb-4 md:mb-0">
               <h2 className="text-xl font-bold">Contact</h2>
               <ul>
                 <li className="text-sm text-stone-400 mb-2 mt-2 hover:text-white transition-colors duration-300 cursor-pointer">
-                  Email Me
+                  <a
+                    href="/contact"
+                    className="no-underline text-stone-400 hover:text-white"
+                  >
+                    Email Me
+                  </a>
                 </li>
                 <li className="text-sm mb-2 text-stone-400 hover:text-white transition-colors duration-300 cursor-pointer">
                   Call Me

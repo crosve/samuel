@@ -14,10 +14,8 @@ function Intro() {
         top: 0,
         width: "100%",
         height: "100vh",
-        borderRadius: "40px",
         backgroundImage: "url('aluminum.jpeg')",
         backgroundSize: "cover",
-        // backgroundPosition: "center",
       }}
     >
       <Box

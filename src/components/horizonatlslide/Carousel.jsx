@@ -10,13 +10,13 @@ const cards = [
     description:
       "Specializing in aluminum door installation and repair, I offer tailored solutions to elevate the look and functionality of your space. With a focus on precision and quality craftsmanship, trust me to deliver lasting results that exceed your expectations.",
   },
-  {
-    id: 2,
-    title: "Framing Carpentry",
-    url: "fa-solid fa-crop-simple",
-    description:
-      "As a sole proprietor specializing in framing carpentry, I bring a wealth of expertise and dedication to each project I undertake. With meticulous attention to detail and a passion for craftsmanship, I focus on delivering high-quality framing solutions tailored to your specific requirements. ",
-  },
+  // {
+  //   id: 2,
+  //   title: "Framing Carpentry",
+  //   url: "fa-solid fa-crop-simple",
+  //   description:
+  //     "As a sole proprietor specializing in framing carpentry, I bring a wealth of expertise and dedication to each project I undertake. With meticulous attention to detail and a passion for craftsmanship, I focus on delivering high-quality framing solutions tailored to your specific requirements. ",
+  // },
   {
     id: 3,
     title: "Window Installation",
@@ -43,8 +43,8 @@ function Carousel() {
   return (
     <section
       ref={ref}
-      className="h-[300vh]  top-0 sticky"
-      style={{ background: "#292929", borderRadius: "40px" }}
+      className="h-[300vh]  top-0 sticky "
+      style={{ background: "#292929" }}
     >
       <div className="flex flex-row sticky  top-0 h-screen items-center  overflow-hidden">
         <motion.div style={{ x }} className="flex flex-row gap-20">

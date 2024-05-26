@@ -9,19 +9,19 @@ function NavLinks() {
     <>
       <NavLink
         to="/"
-        className="text-xl font-medium hover:text-white text-neutral-200"
+        className="text-2xl font-medium hover:text-white text-neutral-200 transition-colors duration-300"
       >
         Home
       </NavLink>
       <NavLink
         to="/reviews"
-        className="text-xl font-medium hover:text-white text-neutral-200"
+        className="text-2xl font-medium hover:text-white text-neutral-200 transition-colors duration-300"
       >
         Gallery
       </NavLink>
       <NavLink
         to="/contact"
-        className="text-xl font-medium hover:text-white text-neutral-200"
+        className="text-2xl font-medium hover:text-white text-neutral-200 transition-colors duration-300"
       >
         Contact
       </NavLink>

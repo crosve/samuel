@@ -1,7 +1,10 @@
-import React from "react";
+import { useState } from "react";
 import Form from "../components/contact/Form";
+import ErrorMessage from "../components/lib/ErrorMessage";
 
 function Contact() {
+  const [errorBool, setErrorBool] = useState(false);
+  const [error, setError] = useState("");
   return (
     <div
       style={{
@@ -13,10 +16,16 @@ function Contact() {
         gap: "1rem",
       }}
     >
+      <ErrorMessage
+        error={error}
+        errorBool={errorBool}
+        setErrorBool={setErrorBool}
+      />
+
       <h1 style={{ textAlign: "center" }} className="text-2xl ">
         Contact Me
       </h1>
-      <Form />
+      <Form setError={setError} setErrorBool={setErrorBool} />
     </div>
   );
 }
