@@ -2,8 +2,9 @@ import { useState, useRef } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import emailjs from "@emailjs/browser";
+import ErrorMessage from "../lib/ErrorMessage";
 
-function Form() {
+function Form({ setError, setErrorBool }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -15,7 +16,9 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name === "" || email === "" || message === "") {
-      alert("Please fill all the fields");
+      setError("Please fill all the fields");
+      setErrorBool(true);
+      console.log("Please fill all the fields");
       return;
     }
 
@@ -34,6 +37,8 @@ function Form() {
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setError(error.text);
+          setErrorBool(true);
         }
       );
 
